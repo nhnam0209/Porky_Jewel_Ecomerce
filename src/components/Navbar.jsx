@@ -34,7 +34,7 @@ const Input = styled.input`
     border: none;
 `
 const Logo = styled.h1`
-    font-weight: bold
+    font-weight: bold;
 `
 
 const Center = styled.div`
@@ -55,7 +55,9 @@ const Navbar = () => {
                         <SearchIcon />
                     </SearchContainer>
                 </Left>
-                <Center>b</Center>
+                <Center>
+                    <Logo>Jade Emporium</Logo>
+                </Center>
                 <Right>c</Right>
             </Wrapper>
         </Container>
