@@ -1,3 +1,5 @@
+import { Badge } from "@material-ui/core";
+import ShoppingCart  from "@material-ui/icons/ShoppingCartOutlined";
 import SearchIcon from "@material-ui/icons/Search";
 import React from 'react';
 import styled from 'styled-components';
@@ -36,12 +38,24 @@ const Input = styled.input`
 const Logo = styled.h1`
     font-weight: bold;
 `
-
+// logo
 const Center = styled.div`
     flex:1;
 `
+
 const Right = styled.div`
     flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+`
+
+const MenuItem = styled.div`
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+
 `
 
 const Navbar = () => {
@@ -51,14 +65,22 @@ const Navbar = () => {
                 <Left>
                     <Language>EN</Language>
                     <SearchContainer>
-                        <Input />
-                        <SearchIcon />
+                        <Input/>
+                        <SearchIcon style={{color:"gray", fontsize:16}}/>
                     </SearchContainer>
                 </Left>
                 <Center>
                     <Logo>Jade Emporium</Logo>
                 </Center>
-                <Right>c</Right>
+                <Right>
+                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem>
+                    <Badge badgeContent={4} color="secondary">
+                        <ShoppingCart/>
+                    </Badge>
+                    </MenuItem>
+                </Right>
             </Wrapper>
         </Container>
     )
