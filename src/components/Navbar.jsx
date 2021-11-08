@@ -1,6 +1,6 @@
-import { SearchSource } from 'jest'
-import React from 'react'
-import styled from 'styled-components'
+import SearchIcon from "@material-ui/icons/Search";
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
     height: 60px;
@@ -8,19 +8,35 @@ const Container = styled.div`
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 `
 
 const Left  = styled.div`
-    flex:1;`
+    flex:1;
+    display: flex;
+    align-items: center;
+`
 
 const Language = styled.span`
     font-size: 14px;
     cursor: pointer;
 `
 const SearchContainer = styled.div`
-    border: 1px solid lightgray;
+    border: 0.5px solid lightgray;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    padding: 5px;
+
 `
+const Input = styled.input`
+    border: none;
+`
+const Logo = styled.h1`
+    font-weight: bold
+`
+
 const Center = styled.div`
     flex:1;
 `
@@ -35,8 +51,8 @@ const Navbar = () => {
                 <Left>
                     <Language>EN</Language>
                     <SearchContainer>
-                        input 
-                        <SearchSource/>
+                        <Input />
+                        <SearchIcon />
                     </SearchContainer>
                 </Left>
                 <Center>b</Center>
