@@ -4,8 +4,7 @@ import styled from 'styled-components';
 
 const Backgroundpicture = styled.img`
     width: 1519px;
-    height: 800px;
-    position: absolute;
+    height: 700px;
 `
 
 const Picture = () => {
