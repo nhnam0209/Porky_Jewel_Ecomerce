@@ -1,11 +1,13 @@
 import { Badge } from "@material-ui/core";
 import ShoppingCart  from "@material-ui/icons/ShoppingCartOutlined";
 import SearchIcon from "@material-ui/icons/Search";
+import Logo from './img/logo.png'
 import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    height: 60px;
+    height: 250px;
+    background: mediumpurple;
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -14,16 +16,16 @@ const Wrapper = styled.div`
     justify-content: space-between;
 `
 
-const Left  = styled.div`
+const Left = styled.div`
     flex:1;
-    display: flex;
     align-items: center;
 `
-
-const Language = styled.span`
-    font-size: 14px;
-    cursor: pointer;
+const Homepagebutton = styled.img`
+    width: 400px;
+    height: 200px;
+    margin: 5px;    
 `
+
 const SearchContainer = styled.div`
     border: 0.5px solid lightgray;
     display: flex;
@@ -35,10 +37,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
     border: none;
 `
-const Logo = styled.h1`
-    font-weight: bold;
-`
-// logo
+
 const Center = styled.div`
     flex:1;
 `
@@ -63,21 +62,19 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <Language>EN</Language>
-                    <SearchContainer>
-                        <Input/>
-                        <SearchIcon style={{color:"gray", fontsize:16}}/>
-                    </SearchContainer>
+                    <Homepagebutton src={Logo}/>
                 </Left>
                 <Center>
-                    <Logo>Jade Emporium</Logo>
+
                 </Center>
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
+                    <SearchContainer>
+                        <Input/>
+                        <SearchIcon style={{color:"white", fontsize:16}}/>
+                    </SearchContainer>
                     <MenuItem>
                     <Badge badgeContent={4} color="secondary">
-                        <ShoppingCart/>
+                        <ShoppingCart style = {{color:"white"}}/>
                     </Badge>
                     </MenuItem>
                 </Right>

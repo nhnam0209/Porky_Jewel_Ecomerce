@@ -1,14 +1,14 @@
 import React from 'react'
-import Annoucement from '../components/Annoucement'
 import Categories from '../components/Categories'
 import Navbar from '../components/Navbar'
+import Picture from '../components/Picture'
 
 const Home = () => {
     return (
         <div>
-            <Annoucement/>
             <Navbar/>
-            <Categories/>
+            <Categories/> 
+            <Picture/>           
         </div>
     )
 }
