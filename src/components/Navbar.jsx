@@ -6,8 +6,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    height: 250px;
-    background: mediumpurple;
+    width: 100%;
+    height: 270px;
+    background: #9B4A97FF;
 `
 const Wrapper = styled.div`
     padding: 10px 20px;

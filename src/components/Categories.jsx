@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // import { FaBars } from 'react-icons/fa';
 
 const Nav = styled.nav`
-  background: #FFB200;
+  background: #F9A12EFF;
   height: 50px;
   display: flex;
   align-items: center;
