@@ -28,12 +28,12 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-    height: 100%;
-    width: 100%;
-    
+    height: 70%;
+    width: 100%; 
+    margin-top: 30%;  
+    margin: auto;
+ 
 `;
-
-
 const InfoContainer = styled.div`
     flex: 1;
     padding: 50px;
