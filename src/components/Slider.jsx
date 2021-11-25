@@ -2,7 +2,7 @@ import SmoothList from 'react-smooth-list';
 import React from 'react'
 import styled from 'styled-components';
 import picture from './img/bgpicture.png';
-
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const Container = styled.div`
@@ -11,6 +11,12 @@ const Container = styled.div`
     display:flex;
     background-color: #FC766AFF;
     position: relative;
+    background: url(${picture});
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    margin: auto;
 `;
 
 const Wrapper = styled.div`
@@ -22,60 +28,62 @@ const Slide = styled.div`
     display: flex;
     align-items: center;
 `;
-const ImgContainer = styled.div`
-    height: 100%;
-    flex: 1;
-`;
 
-const Image = styled.img`
-    height: 70%;
-    width: 100%; 
-    margin-top: 30%;  
-    margin: auto;
- 
-`;
 const InfoContainer = styled.div`
     flex: 1;
     padding: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 `;
 
 const Title = styled.h1`
-    font-size: 40px;
+    font-size: 80px;
+    color: white;
+    font-family: 'Hurricane', cursive;
+    text-shadow: 1px 1px 2px pink;
+  
 `;
+
 const Desc = styled.p`
     margin: 50px 0px;
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    color: white;
+
 
 `;
 const Button = styled.button`
     padding: 10px;
     font-size: 20px;
-    background-color: white;
+    background-color: #FC766AFF;
+    color: white;
     cursor: pointer;
-
+    border-radius: 12px;
+    padding: 20px;
+    border: none;
 `;
 
 const Slider = () => {
     return (
+        <ScrollAnimation animateIn="fadeIn" animateOut='fadeOut'>
         <Container>
             <Wrapper>
                 <Slide>
-                <ImgContainer>
-                    <Image src= {picture}/>
-                </ImgContainer>
                 <InfoContainer>
                     <SmoothList>    
-                        <Title>WELCOME TO JADE EMPORIUM</Title>
+                        <Title> JADE EMPORIUM</Title>
                         <Desc>Where a jewelry is standard of the beauty</Desc>
                         <Button>SHOP NOW</Button>
                     </SmoothList>
                 </InfoContainer>
                 </Slide>
             </Wrapper>
-
         </Container>
+        </ScrollAnimation>
+
     )
 }
 

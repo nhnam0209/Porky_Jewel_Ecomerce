@@ -1,14 +1,14 @@
 import { Badge } from "@material-ui/core";
 import ShoppingCart  from "@material-ui/icons/ShoppingCartOutlined";
 import SearchIcon from "@material-ui/icons/Search";
-import Logo from './img/logo.png'
+import Logo from './img/logonobg.png'
 import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
     width: 100%;
     height: 270px;
-    background: #9B4A97FF;
+    background: #FAC240;
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -66,7 +66,6 @@ const Navbar = () => {
                     <Homepagebutton src={Logo}/>
                 </Left>
                 <Center>
-
                 </Center>
                 <Right>
                     <SearchContainer>

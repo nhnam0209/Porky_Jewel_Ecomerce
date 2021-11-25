@@ -16,7 +16,10 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.div` 
-  color: #fff;
+  color: #385524;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Recursive', sans-serif;
   display: flex;
   align-items: center;
   margin: 10px;    

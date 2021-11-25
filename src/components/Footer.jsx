@@ -6,7 +6,7 @@ import RoomIcon from '@mui/icons-material/Room';
 
 
 const Container = styled.div`
-  background-color: mediumpurple;
+  background-color: #F9A12EFF;
   bottom: 0;
   left: 0;
   width: auto;
@@ -51,6 +51,7 @@ const Center = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 30px;
+  color: #385524;
 `;
 
 const List = styled.ul`
@@ -59,11 +60,14 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
 `;
 
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  color: #385524;
+
 `;
 
 const Right = styled.div`
@@ -76,6 +80,8 @@ const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
   align-center: center;
+  color: #385524;
+
 `
 
 const Footer = () => {
@@ -101,7 +107,7 @@ const Footer = () => {
             <ListItem>Home</ListItem>
             <ListItem>Cart</ListItem>
             <ListItem>Privacy</ListItem>
-            <ListItem>Payment Policy</ListItem>
+            <ListItem>Store Policy</ListItem>
             <ListItem>Jade Care</ListItem>
             <ListItem>About Us</ListItem>
           </List>
