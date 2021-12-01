@@ -39,23 +39,23 @@ export const CategoriesItem = [
 export const popularProducts = [
     {
         id: 1,
-        img: "./img/Product1.jpeg",
-        type: "Ring"
+        img: "https://drive.google.com/file/d/1komFj9Y8Ja9J-GKbGTTVSntxPuSmlvig/view?usp=sharing",
+        type: "Ring",
     },
     {
         id: 2,
-        img: "./img/Product2.jpeg",
-        type: "Ring"
+        img: "https://drive.google.com/file/d/1W8IrVSZE2RI-Sjpiio5EfQamdRtP5bN_/view?usp=sharing",
+        type: "Ring",
     },
     {
         id: 3,
         img: "./img/Product3.jpeg",
-        type: "Bangle"
+        type: "Bangle",
     },
     {
         id: 4,
         img: "./img/Product4.jpeg",
-        type: "Earrings"
+        type: "Earrings",
     },
     {
         id: 5,
@@ -69,6 +69,21 @@ export const popularProducts = [
     },
     {
         id: 7,
+        img: "./img/Product7.jpeg",
+        type: "Bangle"
+    },
+    {
+        id: 8,
+        img: "./img/Product7.jpeg",
+        type: "Bangle"
+    },
+    {
+        id: 9,
+        img: "./img/Product7.jpeg",
+        type: "Bangle"
+    },
+    {
+        id: 10,
         img: "./img/Product7.jpeg",
         type: "Bangle"
     },
