@@ -69,7 +69,7 @@ const Categories = () => {
         <Nav>
           <NavMenu>
             <NavLink to='/' activeStyle>
-              Necklace
+                Necklace
             </NavLink>
             <NavLink to='/' activeStyle>
                 Bangle
@@ -89,7 +89,6 @@ const Categories = () => {
             <NavLink to='/' activeStyle>
                 Other
             </NavLink>
-
           </NavMenu>
             <NavMenuR>
                 <NavLink to='/' activeStyle>

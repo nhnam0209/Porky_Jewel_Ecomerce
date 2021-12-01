@@ -115,13 +115,13 @@ const Footer = () => {
         <Right>
           <Title>Contact</Title>
           <ContactItem>
-              <RoomIcon style={{marginRight:"10px"}}/>Address
+              <RoomIcon style={{marginRight:"10px"}}/> 23 nguyen huu tho, V-2902, Tan Hung Ward, District 7, Ho chi minh city, Vietnam 70000
           </ContactItem>
           <ContactItem>
-              <PhoneIphone style={{marginRight:"10px"}}/>Phone
+              <PhoneIphone style={{marginRight:"10px"}}/> +84 776964136
           </ContactItem>
           <ContactItem>
-              <Mail style={{marginRight:"10px"}}/> Email
+              <Mail style={{marginRight:"10px"}}/> buinguyenanh1973@yahoo.com
           </ContactItem>
         </Right>
     </Container>
