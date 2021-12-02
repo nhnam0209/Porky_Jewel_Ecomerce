@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
-// import {NavLink as Link} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {NavLink as Link} from 'react-router-dom'
 // import { FaBars } from 'react-icons/fa';
 
 const Nav = styled.nav`
@@ -11,8 +12,15 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
-  /* Third Nav */
-  justify-content: flex-start; 
+  &:icon {
+    display: none;
+  }
+  @media screen and (max-width: 380px){
+    &:icon{
+    float: right;
+    display: block;
+    }
+  }
 `;
 
 const NavLink = styled.div` 
@@ -52,11 +60,7 @@ const NavMenuR = styled.div`
   align-items: left;
   margin-right: -100px;
   margin-left: auto;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
+  overflow: hidden;
   @media screen and (max-width: 768px) {
     display: none;
   }

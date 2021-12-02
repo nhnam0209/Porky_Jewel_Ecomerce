@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Product from '../components/Product';
 import {CategoriesItem} from '../data'
 import Products from './../components/Products';
+import Newsletter from '../components/Newsletter';
 
 const Container = styled.div``;
 
@@ -18,10 +19,25 @@ const Filter = styled.div`
     margin: 20px;
 `;
 
-
 const Title = styled.h1`
     margin: 20px;
 `;
+
+const FliterText = styled.div`
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+`;
+
+const Select = styled.select`
+    padding: 10px;
+    margin-right: 20px;
+`;
+
+const Option = styled.option`
+
+`;
+
 
 const ProductList = () => {
     return (
@@ -30,10 +46,30 @@ const ProductList = () => {
             <Categories/>
             <Title>Ring</Title>
             <FilterContainer>
-                <Filter>filter1</Filter>
-                <Filter>filter2</Filter>
+                <Filter>
+                    <FliterText>Filter Products:</FliterText>
+                    <Select>
+                        <Option disabled selected>Product</Option>
+                        <Option>Necklace</Option>
+                        <Option>Bangle</Option>
+                        <Option>Ring</Option>
+                        <Option>Brooch</Option>
+                        <Option>Earings</Option>
+                        <Option>Pearl</Option>
+                        <Option>Other</Option>
+                    </Select>
+                </Filter>
+                <Filter>
+                    <FliterText>Sort Products:</FliterText>
+                    <Select>
+                        <Option disabled selected>Newest</Option>
+                        <Option>Price (high to low)</Option>
+                        <Option>Price (low to high)</Option>
+                    </Select>
+                </Filter>
             </FilterContainer>
             <Products/>
+            <Newsletter/>
             <Footer/>
         </Container>
     )
