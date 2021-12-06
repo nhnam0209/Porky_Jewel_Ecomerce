@@ -1,26 +1,21 @@
 import React from 'react'
 import styled from 'styled-components';
+import { FaBars } from 'react-icons/fa';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {NavLink as Link} from 'react-router-dom'
 // import { FaBars } from 'react-icons/fa';
 
+
 const Nav = styled.nav`
   background: #F9A12EFF;
-  height: 50px;
+  height: 85px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  z-index: 10;
-  &:icon {
-    display: none;
-  }
-  @media screen and (max-width: 380px){
-    &:icon{
-    float: right;
-    display: block;
-    }
-  }
+  padding: 0.2rem calc((100vw - 1000px) / 2);
+  z-index: 12;
+  /* Third Nav */
+  /* justify-content: flex-start; */
+
 `;
 
 const NavLink = styled.div` 
@@ -38,8 +33,26 @@ const NavLink = styled.div`
   &.active {
     color: #15cdfc;
   }
+  @media only screen and (max-width: 380px) {
+
+    display: none
+  }
 `;
 
+const Bars = styled(FaBars)`
+display: none;
+color: #808080;
+@media screen and (max-width: 380px) {
+  display: block;
+  position: absolute;
+  align-items:
+  top: 10;
+  right: 0;
+  transform: translate(-100%, 75%);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+`;
 
 const NavMenu = styled.div`
   display: flex;
@@ -51,7 +64,7 @@ const NavMenu = styled.div`
   /* Third Nav */
   /* width: 100vw;
   white-space: nowrap; */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 380px) {
     display: none;
   }
 `;
@@ -61,7 +74,8 @@ const NavMenuR = styled.div`
   margin-right: -100px;
   margin-left: auto;
   overflow: hidden;
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 380px) {
     display: none;
   }
 `;
@@ -71,29 +85,30 @@ const Categories = () => {
     return (
         <>
         <Nav>
-          <NavMenu>
-            <NavLink to='/' activeStyle>
-                Necklace
-            </NavLink>
-            <NavLink to='/' activeStyle>
-                Bangle
-            </NavLink>
-            <NavLink to='/' activeStyle>
-                Ring
-            </NavLink>
-            <NavLink to='/' activeStyle>
-                Brooch
-            </NavLink>
-            <NavLink to='/' activeStyle>
-                Earrings
-            </NavLink>
-            <NavLink to='/' activeStyle>
-                Pearl
-            </NavLink>
-            <NavLink to='/' activeStyle>
-                Other
-            </NavLink>
-          </NavMenu>
+          <Bars />
+            <NavMenu>
+              <NavLink to='/' activeStyle>
+                  Necklace
+              </NavLink>
+              <NavLink to='/' activeStyle>
+                  Bangle
+              </NavLink>
+              <NavLink to='/' activeStyle>
+                  Ring
+              </NavLink>
+              <NavLink to='/' activeStyle>
+                  Brooch
+              </NavLink>
+              <NavLink to='/' activeStyle>
+                  Earrings
+              </NavLink>
+              <NavLink to='/' activeStyle>
+                  Pearl
+              </NavLink>
+              <NavLink to='/' activeStyle>
+                  Other
+              </NavLink>
+            </NavMenu>
             <NavMenuR>
                 <NavLink to='/' activeStyle>
                     Jade Care

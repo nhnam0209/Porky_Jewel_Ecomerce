@@ -18,16 +18,28 @@ const Container = styled.div`
     background-attachment: fixed;
     background-repeat: no-repeat;
     margin: auto;
+
+    @media only screen and (max-width:380px){
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
 `;
 
 const Title = styled.h1`
     font-size: 70px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;  
+    @media only screen and (max-width:380px){
+        font-size: 50px;
+    }  
 `;
 const Description = styled.div`
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
+    @media only screen and (max-width:380px){
+        font-size: 20px;
+    } 
 `;
 const InputContainer = styled.div`
     width: 25%;
@@ -35,7 +47,12 @@ const InputContainer = styled.div`
     background-color: white;
     display: flex;
     justify-content: space-between;
-    border: 1px solid lightgray;
+    border: 1px solid lightgray;   
+     @media only screen and (max-width:380px){
+        display: flex;
+        justify-content: center;
+
+    }
 `;
 const Input = styled.input`
     border: none;

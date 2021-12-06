@@ -10,10 +10,11 @@ const Container = styled.div`
     width: 100%;
     height: 270px;
     background: #FAC240;
-    @media only screen and (max-width:380px){
+    @media only screen and (max-width:375px){
         display: flex;
         flex-direction: column;
         height: 200px;
+        width: 80%;
     }
 `
 const Wrapper = styled.div`
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     @media only screen and (max-width:380px){
         padding: 2px 0px;
         flex: 1;

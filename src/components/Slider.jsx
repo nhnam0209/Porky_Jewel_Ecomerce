@@ -17,16 +17,33 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: 1920px 1080px;
     margin: auto;
+
+    @media only screen and (max-width:380px){
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
 `;
 
 const Wrapper = styled.div`
     height: 100%;
+    @media only screen and (max-width:380px){
+        display: flex;
+        height: auto;
+        width: 100%;
+    }
 `;
 const Slide = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
+    @media only screen and (max-width:380px){
+        display: flex;
+        height: auto;
+        width: 100%;
+    }
+    
 `;
 
 const InfoContainer = styled.div`
@@ -35,6 +52,11 @@ const InfoContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    @media only screen and (max-width:380px){
+        display: flex;
+        height: auto;
+        width: 100%;
+    }
 
 `;
 
@@ -43,7 +65,9 @@ const Title = styled.h1`
     color: white;
     font-family: 'Hurricane', cursive;
     text-shadow: 1px 1px 2px pink;
-  
+    @media only screen and (max-width:380px){
+        font-size: 50px;
+    }
 `;
 
 const Desc = styled.p`

@@ -13,6 +13,11 @@ const Container = styled.div`
   margin-top: -5px;
   padding: 1rem;
   display: flex;
+  @media only screen and (max-width:380px){
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 `;
 
 const Left = styled.div`
@@ -20,16 +25,32 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
+  @media only screen and (max-width:380px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
 `;
 
 const Logo = styled.img`
   width: 40%;
   height: 60%;
   margin: 20px 0px;
+  @media only screen and (max-width:380px){
+    width: 70%;
+    height: 60%;
+    margin: 20px 0px;
+}
 `;
 
 const SocialContainer = styled.div`
   display: flex;
+  @media only screen and (max-width:380px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: row;
+}
 `;
 
 const SocialIcon = styled.div`
@@ -47,6 +68,13 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  @media only screen and (max-width:380px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
 `;
 
 const Title = styled.h3`
@@ -60,7 +88,12 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-
+  @media only screen and (max-width:380px){
+    padding: 2px 0px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
 `;
 
 const ListItem = styled.li`
@@ -73,7 +106,11 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-
+  @media only screen and (max-width:380px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: column;
+}
 `;
 
 const ContactItem = styled.div`
@@ -81,7 +118,9 @@ const ContactItem = styled.div`
   display: flex;
   align-center: center;
   color: #385524;
-
+  @media only screen and (max-width:380px){    
+    flex: 1;
+}
 `
 
 const Footer = () => {
