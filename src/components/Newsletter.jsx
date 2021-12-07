@@ -39,6 +39,9 @@ const Description = styled.div`
     margin-bottom: 20px;
     @media only screen and (max-width:380px){
         font-size: 20px;
+        align-items: center;
+        text-align: center;
+        text-shadow: 0px 2px pink;
     } 
 `;
 const InputContainer = styled.div`

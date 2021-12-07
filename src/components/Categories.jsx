@@ -11,11 +11,14 @@ const Nav = styled.nav`
   height: 85px;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
-  z-index: 12;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  z-index: 10;
   /* Third Nav */
   /* justify-content: flex-start; */
-
+  @media only screen and (max-width:380px){
+      display: none;
+      flex-direction: column;
+  }
 `;
 
 const NavLink = styled.div` 
@@ -34,20 +37,22 @@ const NavLink = styled.div`
     color: #15cdfc;
   }
   @media only screen and (max-width: 380px) {
-
-    display: none
+    display: none;
+  }  
+  @media only screen and (max-width: 768px){
+    display: none;
   }
 `;
 
 const Bars = styled(FaBars)`
 display: none;
 color: #808080;
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 768px) {
   display: block;
   position: absolute;
-  align-items:
   top: 10;
   right: 0;
+  position: center;
   transform: translate(-100%, 75%);
   font-size: 1.8rem;
   cursor: pointer;
@@ -62,9 +67,12 @@ const NavMenu = styled.div`
   /* Second Nav */
   /* margin-right: 24px; */
   /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
+  width: 100vw;
+  white-space: nowrap;
   @media screen and (max-width: 380px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -76,6 +84,9 @@ const NavMenuR = styled.div`
   overflow: hidden;
 
   @media screen and (max-width: 380px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -108,16 +119,15 @@ const Categories = () => {
               <NavLink to='/' activeStyle>
                   Other
               </NavLink>
+              <NavMenuR>
+                  <NavLink to='/' activeStyle>
+                      Jade Care
+                  </NavLink>
+                  <NavLink to='/' activeStyle> 
+                      About Us
+                  </NavLink>
+              </NavMenuR>
             </NavMenu>
-            <NavMenuR>
-                <NavLink to='/' activeStyle>
-                    Jade Care
-                </NavLink>
-                <NavLink to='/' activeStyle>
-                    About Us
-                </NavLink>
-            </NavMenuR>
-
         </Nav>
       </>
     )

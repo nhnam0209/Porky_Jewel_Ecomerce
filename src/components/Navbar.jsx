@@ -10,12 +10,16 @@ const Container = styled.div`
     width: 100%;
     height: 270px;
     background: #FAC240;
-    @media only screen and (max-width:375px){
+    @media only screen and (max-width:380px){
         display: flex;
         flex-direction: column;
-        height: 200px;
-        width: 80%;
+        height: 300px;
     }
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -24,6 +28,12 @@ const Wrapper = styled.div`
     justify-content: space-between;
     
     @media only screen and (max-width:380px){
+        padding: 2px 0px;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width:768px){
         padding: 2px 0px;
         flex: 1;
         flex-direction: column;
@@ -39,6 +49,13 @@ const Homepagebutton = styled.img`
     height: 200px;
     margin: 5px;    
     @media only screen and (max-width:380px){
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        height: 150px;
+        width: 250px;
+    }
+    @media only screen and (max-width:768px){
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -73,6 +90,9 @@ const Right = styled.div`
     align-items: center;
     justify-content: flex-end;
     @media only screen and (max-width:380px){
+        flex: 1;
+    }
+    @media only screen and (max-width:768px){
         flex: 1;
     }
 `

@@ -18,6 +18,11 @@ const Container = styled.div`
     flex-direction: column;
     height: 100vh;
   }
+  @media only screen and (max-width:768px){
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 `;
 
 const Left = styled.div`
@@ -30,18 +35,29 @@ const Left = styled.div`
     flex: 1;
     flex-direction: column;
     margin-bottom: 20px;
-}
+  }
+  @media only screen and (max-width:768px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 `;
 
 const Logo = styled.img`
-  width: 40%;
+  width: 50%;
   height: 60%;
   margin: 20px 0px;
   @media only screen and (max-width:380px){
     width: 70%;
     height: 60%;
     margin: 20px 0px;
-}
+  }
+  @media only screen and (max-width:768px){
+    width: 60%;
+    height: 60%;
+    margin: 20px 0px;
+  }
 `;
 
 const SocialContainer = styled.div`
@@ -50,7 +66,12 @@ const SocialContainer = styled.div`
     padding: 2px 0px;
     flex: 1;
     flex-direction: row;
-}
+  }
+  @media only screen and (max-width:768px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: row;
+  }
 `;
 
 const SocialIcon = styled.div`
@@ -73,8 +94,13 @@ const Center = styled.div`
     flex: 1;
     flex-direction: column;
     margin-top: 20px;
-
-}
+  }
+  @media only screen and (max-width:768px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 20px;
+  }
 `;
 
 const Title = styled.h3`
@@ -93,7 +119,13 @@ const List = styled.ul`
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-}
+  }
+  @media only screen and (max-width:768px){
+    padding: 2px 0px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 const ListItem = styled.li`
@@ -110,7 +142,12 @@ const Right = styled.div`
     padding: 2px 0px;
     flex: 1;
     flex-direction: column;
-}
+  }
+  @media only screen and (max-width:768px){
+    padding: 2px 0px;
+    flex: 1;
+    flex-direction: column;
+  }
 `;
 
 const ContactItem = styled.div`
@@ -120,7 +157,10 @@ const ContactItem = styled.div`
   color: #385524;
   @media only screen and (max-width:380px){    
     flex: 1;
-}
+  }
+  @media only screen and (max-width:768px){    
+    flex: 1;
+  }
 `
 
 const Footer = () => {
