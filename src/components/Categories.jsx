@@ -16,7 +16,7 @@ const Nav = styled.nav`
   /* Third Nav */
   /* justify-content: flex-start; */
   @media only screen and (max-width:380px){
-      display: none;
+      display: flex;
       flex-direction: column;
   }
 `;
@@ -76,6 +76,8 @@ const NavMenu = styled.div`
     display: none;
   }
 `;
+
+
 const NavMenuR = styled.div`
   display: flex;
   align-items: left;

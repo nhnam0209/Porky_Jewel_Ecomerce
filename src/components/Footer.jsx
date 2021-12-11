@@ -6,7 +6,7 @@ import RoomIcon from '@mui/icons-material/Room';
 
 
 const Container = styled.div`
-  background-color: #F9A12EFF;
+  background-color: #FAC240;
   bottom: 0;
   left: 0;
   width: auto;
@@ -54,7 +54,7 @@ const Logo = styled.img`
     margin: 20px 0px;
   }
   @media only screen and (max-width:768px){
-    width: 60%;
+    width: 50%;
     height: 60%;
     margin: 20px 0px;
   }
@@ -93,13 +93,13 @@ const Center = styled.div`
     padding: 2px 0px;
     flex: 1;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   @media only screen and (max-width:768px){
     padding: 2px 0px;
     flex: 1;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 `;
 
@@ -151,7 +151,7 @@ const Right = styled.div`
 `;
 
 const ContactItem = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-center: center;
   color: #385524;

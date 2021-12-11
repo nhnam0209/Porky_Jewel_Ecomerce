@@ -6,10 +6,18 @@ import img1 from '../img/Product1.jpeg'
 import { Remove } from '@material-ui/icons';
 
 
-const Container = styled.div``;
+const Container = styled.div`
+
+`;
 
 const Wrapper  = styled.div`
     padding: 20px;
+    @media only screen and (max-width:380px){
+      padding: 10px;
+    }
+    @media only screen and (max-width:768px){
+      padding: 10px;
+    }
 `;
 
 const Title = styled.h1`
@@ -31,9 +39,17 @@ const TopButton = styled.button`
     border: ${props=>props.type === "filled" && "none"};
     background-color: ${props=>props.type === "filled" ? "black" : "transparent"};
     color: ${props=>props.type === "filled" && "white"};
+    
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  @media only screen and (max-width:380px){
+    display: none;
+  }
+  @media only screen and (max-width:768px){
+    padding: none;
+  }
+`;
 
 const TopText = styled.span`
     text-decoration: underline;
@@ -44,6 +60,12 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width:380px){
+    flex-direction: column;
+  }
+  @media only screen and (max-width:768px){
+    flex-direction: column;
+  }
 `;
 const Info = styled.div`
   flex: 3;
@@ -54,6 +76,12 @@ const Product = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  @media only screen and (max-width:380px){
+    flex-direction: column;
+  }
+  @media only screen and (max-width:768px){
+    justify-content: space-between;
+  }
 `;
 const ProductDetail = styled.div`
   flex: 2;
@@ -61,12 +89,28 @@ const ProductDetail = styled.div`
 `;
 const Image = styled.img`
   width: 200px;
+  @media only screen and (max-width:380px){
+    width: 120px;
+    height: 100px;
+  }
+  @media only screen and (max-width:768px){
+    width: 180px;
+    height: 120px;
+  }
 `;
 const Details = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media only screen and (max-width:380px){
+    padding: 10px;
+
+  }
+  @media only screen and (max-width:768px){
+    padding: 10px;
+
+  }
 `;
 const ProductName = styled.div``;
 
@@ -78,6 +122,16 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width:380px){
+    padding: 5px;
+    margin: 5px;
+    justify-content: right;
+    display: flex-end;
+  }
+  @media only screen and (max-width:768px){
+    padding: 10px;  
+    margin: 10px;
+  }
 `;
 
 const ProductAmountContainer = styled.div`
@@ -151,7 +205,7 @@ const Cart = () => {
                       <Image src ={img1}/>
                       <Details>
                         <ProductName><b>Product:</b> ABC</ProductName>
-                        <ProductId><b>ID:</b> ABC</ProductId>
+                        <ProductId><b>ID:</b> 123456789485</ProductId>
                       </Details>
                     </ProductDetail>
                     <PriceDetail>

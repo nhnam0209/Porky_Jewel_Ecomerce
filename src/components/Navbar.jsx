@@ -1,5 +1,4 @@
 import { Badge } from "@material-ui/core";
-import { mobile } from "../responsive"
 import ShoppingCart  from "@material-ui/icons/ShoppingCartOutlined";
 import SearchIcon from "@material-ui/icons/Search";
 import Logo from './img/logonobg.png'
@@ -19,7 +18,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         width: 100%;
-      }
+    }
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -28,13 +27,11 @@ const Wrapper = styled.div`
     justify-content: space-between;
     
     @media only screen and (max-width:380px){
-        padding: 2px 0px;
         flex: 1;
         flex-direction: column;
     }
 
     @media only screen and (max-width:768px){
-        padding: 2px 0px;
         flex: 1;
         flex-direction: column;
     }
@@ -65,7 +62,6 @@ const Homepagebutton = styled.img`
 `
 
 const SearchContainer = styled.div`
-    border: 0.5px solid lightgray;
     display: flex;
     align-items: center;
     margin-left: 25px;
@@ -74,6 +70,10 @@ const SearchContainer = styled.div`
 `
 const Input = styled.input`
     border: none;
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
     @media only screen and (max-width:380px){
         flex: 1;
         flex-direction: column;
@@ -116,7 +116,7 @@ const Navbar = () => {
                 <Right>
                     <SearchContainer>
                         <Input placeholder = "Search"/>
-                        <SearchIcon style={{color:"white", fontsize:16}}/>
+                        <SearchIcon style={{color:"white", fontsize:16, cursor: "pointer"}}/>
                     </SearchContainer>
                     <MenuItem>
                     <Badge badgeContent={4} color="secondary">

@@ -2,6 +2,7 @@ import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@m
 import React from 'react'
 import styled from 'styled-components';
 
+
 const Info = styled.div`
     opacity: 0;
     width: 100%;

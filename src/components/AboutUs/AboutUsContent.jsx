@@ -16,6 +16,19 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: 1920px 1080px;
     margin: auto;
+
+    @media only screen and (max-width:380px){
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
+    @media only screen and (max-width:768px){
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
+
 `;
 
 const Wrapper = styled.div`
