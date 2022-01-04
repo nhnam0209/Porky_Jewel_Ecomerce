@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "webidl-conversions": "^7.0.0"
+  }
+}
