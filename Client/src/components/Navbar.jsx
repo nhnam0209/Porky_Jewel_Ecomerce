@@ -4,6 +4,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import Logo from './img/logonobg.png'
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
 
 const Container = styled.div`
     width: 100%;
@@ -109,7 +111,9 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <Homepagebutton src={Logo}/>
+                    <Link to = "/">
+                        <Homepagebutton src={Logo}/>
+                    </Link>
                 </Left>
                 <Center>
                 </Center>

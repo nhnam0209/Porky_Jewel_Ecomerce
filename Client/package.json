@@ -28,7 +28,7 @@
     "react-progressive-image-loading": "^3.0.3",
     "react-responsive": "*",
     "react-responsive-image": "^5.0.0",
-    "react-router-dom": "^6.0.2",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "^4.0.3",
     "react-scroll-motion": "^0.2.1",
     "react-smooth-list": "^1.0.2",

@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components';
 import picture from './img/logo.png'
 import RoomIcon from '@mui/icons-material/Room';
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -163,6 +164,17 @@ const ContactItem = styled.div`
   }
 `
 
+const linkStyle = {
+  color: "#385524",
+  fontSize: "18px",
+  fontWeight: "bold",
+  fontFamily: "Recursive, sans-serif",
+  display: "flex",
+  alignItems: "center",
+  textDecoration: "none",
+  cursor: "pointer",
+};
+
 const Footer = () => {
   return (
     <Container>
@@ -183,12 +195,12 @@ const Footer = () => {
         <Center>
           <Title>Useful Links</Title>
           <List>
-            <ListItem>Home</ListItem>
+            <ListItem><Link to = "/" style={linkStyle}>Home</Link></ListItem>
             <ListItem>Cart</ListItem>
             <ListItem>Privacy</ListItem>
             <ListItem>Store Policy</ListItem>
-            <ListItem>Jade Care</ListItem>
-            <ListItem>About Us</ListItem>
+            <ListItem><Link to = "/jadecare" style={linkStyle}>JadeCare</Link></ListItem>
+            <ListItem><Link to = "/aboutus" style={linkStyle}>About US</Link></ListItem>
           </List>
         </Center>
         <Right>

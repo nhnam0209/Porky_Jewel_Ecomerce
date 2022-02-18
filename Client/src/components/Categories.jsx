@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {NavLink as Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+
 // import { FaBars } from 'react-icons/fa';
 
 
@@ -93,40 +93,54 @@ const NavMenuR = styled.div`
   }
 `;
 
+const linkStyle = {
+  color: "#385524",
+  fontSize: "18px",
+  fontWeight: "bold",
+  fontFamily: "Recursive, sans-serif",
+  display: "flex",
+  alignItems: "center",
+  textDecoration: "none",
+  cursor: "pointer",
+};
 
-const Categories = () => {
+
+const Categories = (item) => {
     return (
         <>
         <Nav>
           <Bars />
             <NavMenu>
               <NavLink to='/' activeStyle>
-                  Necklace
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Necklace</Link>
               </NavLink>
               <NavLink to='/' activeStyle>
-                  Bangle
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Bangle</Link>
               </NavLink>
               <NavLink to='/' activeStyle>
-                  Ring
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Ring</Link>
               </NavLink>
               <NavLink to='/' activeStyle>
-                  Brooch
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Brooch</Link>
+
               </NavLink>
               <NavLink to='/' activeStyle>
-                  Earrings
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Earings</Link>
               </NavLink>
               <NavLink to='/' activeStyle>
-                  Pearl
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Pearl</Link>
+
               </NavLink>
               <NavLink to='/' activeStyle>
-                  Other
+                <Link to= {`/products/${item.cat}`} style={linkStyle}>Other</Link>
+
               </NavLink>
               <NavMenuR>
-                  <NavLink to='/' activeStyle>
-                      Jade Care
+                  <NavLink>
+                    <Link to="/jadecare" style={linkStyle}> Jade Care</Link>
                   </NavLink>
-                  <NavLink to='/' activeStyle> 
-                      About Us
+                  <NavLink> 
+                    <Link to="/aboutus" style={linkStyle}> About Us</Link>
                   </NavLink>
               </NavMenuR>
             </NavMenu>

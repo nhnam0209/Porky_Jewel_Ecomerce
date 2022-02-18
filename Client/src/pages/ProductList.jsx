@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Categories from '../components/Categories';
 import styled from 'styled-components';
 import Product from '../components/Product';
-import {CategoriesItem} from '../data'
+import {categoriesItem} from '../data'
 import Products from './../components/Products';
 import Newsletter from '../components/Newsletter';
 
