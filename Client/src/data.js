@@ -1,4 +1,4 @@
-export const categoriesItem  = [
+export const categories  = [
     {
         id: 1,
         title: "Necklace",

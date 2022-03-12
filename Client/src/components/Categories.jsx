@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-
+import {categories} from "../data";
 // import { FaBars } from 'react-icons/fa';
+import CategoriesItem from './CategoriesItem';
 
 
 const Nav = styled.nav`
@@ -104,7 +105,6 @@ const linkStyle = {
   cursor: "pointer",
 };
 
-
 const Categories = (item) => {
     return (
         <>
@@ -112,28 +112,9 @@ const Categories = (item) => {
           <Bars />
             <NavMenu>
               <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Necklace</Link>
-              </NavLink>
-              <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Bangle</Link>
-              </NavLink>
-              <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Ring</Link>
-              </NavLink>
-              <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Brooch</Link>
-
-              </NavLink>
-              <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Earings</Link>
-              </NavLink>
-              <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Pearl</Link>
-
-              </NavLink>
-              <NavLink to='/' activeStyle>
-                <Link to= {`/products/${item.cat}`} style={linkStyle}>Other</Link>
-
+              {categories.map((item) => (
+                   <CategoriesItem item={item} key={item.id} />
+                       ))}
               </NavLink>
               <NavMenuR>
                   <NavLink>
