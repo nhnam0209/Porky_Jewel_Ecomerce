@@ -2,7 +2,7 @@ import {useState,React,useEffect} from 'react'
 import styled from 'styled-components';
 import {popularProducts} from "../data";
 import Product from "./Product";
-import axios from "axios"
+// import axios from "axios"
 
 
 const Container = styled.div`
@@ -16,13 +16,13 @@ const Container = styled.div`
 const Products = ({cat,filter,sort}) => {
     const [products,setProducts] = useState();
     const [filteredProducts, setFilteredProducts] = useState();
-    useEffect(() => {
-        const getProducts = async () =>{
-            try{
-                const res = await axios.get("http://localhost:500/api/products"); 
-            }catch(err){};
-        }
-    }, [cat]) 
+    // useEffect(() => {
+    //     const getProducts = async () =>{
+    //         try{
+    //             const res = await axios.get("http://localhost:500/api/products"); 
+    //         }catch(err){};
+    //     }
+    // }, [cat]) 
 
     return (
         <Container>

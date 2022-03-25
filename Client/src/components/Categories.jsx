@@ -105,7 +105,7 @@ const linkStyle = {
   cursor: "pointer",
 };
 
-const Categories = (item) => {
+const Categories = () => {
     return (
         <>
         <Nav>

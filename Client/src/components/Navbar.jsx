@@ -123,9 +123,11 @@ const Navbar = () => {
                         <SearchIcon style={{color:"white", fontsize:16, cursor: "pointer"}}/>
                     </SearchContainer>
                     <MenuItem>
+                    <Link to = "/Cart">
                     <Badge badgeContent={4} color="secondary">
                         <ShoppingCart style = {{color:"white"}}/>
                     </Badge>
+                    </Link>
                     </MenuItem>
                 </Right>
             </Wrapper>
