@@ -5,6 +5,8 @@ import Logo from './img/logonobg.png'
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 
 const Container = styled.div`
@@ -107,6 +109,7 @@ const MenuItem = styled.div`
 `
 
 const Navbar = () => {
+    const quantity = useSelector(state=>state.cart.quantity);
     return (
         <Container>
             <Wrapper>
@@ -124,7 +127,7 @@ const Navbar = () => {
                     </SearchContainer>
                     <MenuItem>
                     <Link to = "/Cart">
-                    <Badge badgeContent={4} color="secondary">
+                    <Badge badgeContent={quantity} color="secondary">
                         <ShoppingCart style = {{color:"white"}}/>
                     </Badge>
                     </Link>

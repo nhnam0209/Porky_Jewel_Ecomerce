@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import styled from 'styled-components';
-import img1 from '../img/Product1.jpeg'
 import { Remove } from '@material-ui/icons';
+import { useNavigate  } from 'react-router-dom';
+import { useSelector,useDispatch } from "react-redux";
+import { removeProduct } from '../redux/cartRedux';
+
 
 
 const Container = styled.div`
@@ -184,76 +187,75 @@ const SummaryButton = styled.button`
 
 
 
+
 const Cart = () => {
+  const navigate  = useNavigate();
+  const cart = useSelector((state)=>state.cart);
+  const dispatch = useDispatch();
+
+
+  const handleRemove = ()=>{
+    dispatch(
+      removeProduct({...cart})
+    )
+    // alert("Button Clicked!");
+  }
+
   return (
     <Container>
       <Navbar/>
         <Wrapper>
             <Title>YOUR BAG</Title>
             <Top>
-                <TopButton>CONTINUE SHOPPING</TopButton>
+                <TopButton onClick={()=>navigate("/")}>CONTINUE SHOPPING</TopButton>
                 <TopTexts>
-                    <TopText>Shopping Bag(2)</TopText>
+                    <TopText>Shopping Bag({cart.quantity})</TopText>
                     <TopText>Your Wishlist (0)</TopText>
                 </TopTexts>
                 <TopButton type = "filled">CHECKOUT NOW</TopButton>
             </Top>
             <Bottom>
               <Info>
-                  <Product>
+                  {cart.product.map((product)=>(<Product>
                     <ProductDetail>
-                      <Image src ={img1}/>
+                      <Image src ={product.img}/>
                       <Details>
-                        <ProductName><b>Product:</b> ABC</ProductName>
-                        <ProductId><b>ID:</b> 123456789485</ProductId>
+                        <ProductName><b>Product:</b> {product.title}</ProductName>
+                        <ProductId><b>ID:</b> {product._id}</ProductId>
                       </Details>
                     </ProductDetail>
                     <PriceDetail>
                       <ProductAmountContainer>
-                        <Remove/>
+                        <button onClick={handleRemove}>
+                        <Remove /></button>
                       </ProductAmountContainer>
-                      <ProductPrice>$20</ProductPrice>
+                      <ProductPrice>${product.price*product.quantity}</ProductPrice>
                     </PriceDetail>
-                  </Product>
+                  </Product>))}
                   <Hr/>
-                  <Product>
-                    <ProductDetail>
-                      <Image src ={img1}/>
-                      <Details>
-                        <ProductName><b>Product:</b> ABC</ProductName>
-                        <ProductId><b>ID:</b> ABC</ProductId>
-                      </Details>
-                    </ProductDetail>
-                    <PriceDetail>
-                      <ProductAmountContainer>
-                        <Remove/>
-                      </ProductAmountContainer>
-                      <ProductPrice>$20</ProductPrice>
-                    </PriceDetail>
-                  </Product>
               </Info>
               <Summary>
                 <SummaryTitle>ORDER SUMMARY</SummaryTitle>
                 <SummaryItem>
                   <SummaryItemText>Subtotal</SummaryItemText>
-                  <SummaryItemPrice>$ 80</SummaryItemPrice>
+                  <SummaryItemPrice>${cart.total}</SummaryItemPrice>
                 </SummaryItem>
-                <SummaryItem>
+                {/* <SummaryItem>
                   <SummaryItemText>Estimate Shipping</SummaryItemText>
                   <SummaryItemPrice>$ 5.80</SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
                   <SummaryItemText>Shipping Discount</SummaryItemText>
                   <SummaryItemPrice>$ -5.80</SummaryItemPrice>
-                </SummaryItem>
+                </SummaryItem> */}
                 <SummaryItem type = "total">
                   <SummaryItemText>Total</SummaryItemText>
-                  <SummaryItemPrice>$ 80</SummaryItemPrice>
+                  <SummaryItemPrice>${cart.total}</SummaryItemPrice>
                 </SummaryItem>
-                <SummaryButton>CHECKOUT NOW</SummaryButton>
+                <SummaryButton >CHECKOUT NOW</SummaryButton>
               </Summary>
             </Bottom>
-        </Wrapper>
+        </Wrapper>                                                    
       <Footer/>
     </Container>
   )

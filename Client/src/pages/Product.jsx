@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import Categories from '../components/Categories';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import img1 from '../img/Product1.jpeg'
+import { useLocation, useNavigate  } from 'react-router-dom';
+import { publicRequest } from '../requestMethod';
+import { addProduct } from '../redux/cartRedux';
+import { useDispatch } from "react-redux";
 
 
 const Container = styled.div``;
@@ -84,21 +87,49 @@ const Button2 = styled.button`
 `;
 
 const Product = () => {
+    const navigate  = useNavigate();
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
+
+
+    useEffect(()=>{
+        const getProduct= async() =>{
+            try{
+                const res = await publicRequest.get("/product/find/"+id);
+                setProduct(res.data);
+            }catch{
+
+            }
+        }; 
+        getProduct();
+    },[id]);
+
+
+    const handleClick =()=>{
+        //update cart
+        dispatch(
+            addProduct({ ...product,quantity})
+        );
+    }
+
     return (
         <Container>
             <Navbar/>
             <Categories/>
                 <Wrapper>
                     <ImgContainer>
-                        <Image src={img1}/>
+                        <Image src={product.img}/>
                     </ImgContainer>
                     <InfoContainer>
-                        <Title>ABC</Title>
-                        <Desc>This is the product</Desc>
-                        <Price>$ 20</Price>
+                        <Title>{product.title}</Title>
+                        <Desc>{product.desc}</Desc>
+                        <Price>{product.price}</Price>
                         <AddContainer>
-                            <Button2>CONTINUTE SHOPPING</Button2>
-                            <Button>ADD TO CART</Button>
+                            <Button2 onClick={()=>navigate(-1)}>CONTINUTE SHOPPING</Button2>
+                            <Button onClick={handleClick}>ADD TO CART</Button>
                         </AddContainer>
                     </InfoContainer>
                 </Wrapper>

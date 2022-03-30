@@ -1,0 +1,13 @@
+.sidebar{
+    flex: 1;
+    .top{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo{
+            font-size: 20px;
+        }
+    }
+}

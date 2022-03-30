@@ -105,13 +105,15 @@ const linkStyle = {
   cursor: "pointer",
 };
 
+
 const Categories = () => {
+  
     return (
         <>
         <Nav>
           <Bars />
             <NavMenu>
-              <NavLink to='/' activeStyle>
+              <NavLink activeStyle>
               {categories.map((item) => (
                    <CategoriesItem item={item} key={item.id} />
                        ))}
