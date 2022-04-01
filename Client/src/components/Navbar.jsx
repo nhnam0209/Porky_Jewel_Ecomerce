@@ -7,8 +7,6 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
-
 const Container = styled.div`
     width: 100%;
     height: 270px;

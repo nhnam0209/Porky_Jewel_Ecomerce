@@ -11,14 +11,14 @@ const cartSlice = createSlice({
     reducers:{
         addProduct:(state,action)=>{
             state.quantity +=1;
-            state.product.push(action.payload._id);
+            state.product.push(action.payload);
             state.total += action.payload.price *action.payload.quantity;
             
         },
         removeProduct:(state,action)=>{
-            state.quantity -=1;
-            state.product.filter((cart)=> cart._id !== action.payload._id);
-            state.total -= action.payload.price;
+            state.quantity = 0;
+            state.product =  state.product.filter((product)=> product.id !== action.payload._id);
+            state.total = 0;
         }
     }, 
 });

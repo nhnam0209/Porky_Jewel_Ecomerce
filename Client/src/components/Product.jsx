@@ -1,7 +1,11 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
-import React from 'react'
+import { SearchOutlined } from '@material-ui/icons';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+// import { publicRequest } from '../requestMethod';
+// import { addProduct } from '../redux/cartRedux';
+// import { useDispatch } from "react-redux";
+// import { useLocation, useNavigate  } from 'react-router-dom';
 
 const Info = styled.div`
     opacity: 0;
@@ -66,22 +70,32 @@ const Icon = styled.div`
 
 
 const Product = ({item}) => {
+    // const dispatch = useDispatch();
+    // const [product, setProduct] = useState({});
+    // const [quantity, setQuantity] = useState(1);
+
+    // const handleClick =()=>{
+    //     //update cart
+    //     dispatch(
+    //         addProduct({ ...product,quantity})
+    //     );
+    // }
     return (
         <Container>
             <Circle/>
             <Image src={item.img}/>
             <Info>
-                <Icon>
-                    <ShoppingCartOutlined/>
-                </Icon>
+                {/* <Icon>
+                    <ShoppingCartOutlined /> 
+                </Icon> */}
                 <Icon>
                     <Link to={`/product/${item._id}`}>
                     <SearchOutlined/>
                     </Link>
                 </Icon>
-                <Icon>
+                {/* <Icon>
                     <FavoriteBorderOutlined/>
-                </Icon>
+                </Icon> */}
 
             </Info>
         </Container>

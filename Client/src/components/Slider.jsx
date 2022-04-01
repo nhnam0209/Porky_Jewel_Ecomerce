@@ -1,8 +1,9 @@
 import SmoothList from 'react-smooth-list';
 import React from 'react'
 import styled from 'styled-components';
-import picture from './img/bgpicture.png';
+import picture from './img/bgpicture.jpg';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from "react-router-dom";
 
 
 const Container = styled.div`
@@ -100,7 +101,7 @@ const Slider = () => {
                     <SmoothList>    
                         <Title> JADE EMPORIUM</Title>
                         <Desc>Where a jewelry is standard of the beauty</Desc>
-                        <Button>SHOP NOW</Button>
+                        <Link to = "/products/Necklace"><Button>SHOP NOW</Button></Link>
                     </SmoothList>
                 </InfoContainer>
                 </Slide>

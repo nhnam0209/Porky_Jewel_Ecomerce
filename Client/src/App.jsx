@@ -10,6 +10,8 @@ import JadeCare from './pages/JadeCare';
 import Cart from './pages/Cart';
 import ProductList from './pages/ProductList';
 import Product from './pages/Product';
+import NotFoundPage from './pages/NotFoundPage';
+
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
           <Route exact path = "/" element={<Home/>}/>
           <Route exact path = "/aboutus" element={<AboutUs/>}/>
           <Route exact path = "/jadecare" element={<JadeCare/>}/>
+          <Route path = "*"  element={<NotFoundPage/>} />
           <Route path = "/products/:categories" element={<ProductList/>}/>
           <Route path = "/product/:id" element={<Product/>}/>
           <Route path = "/Cart" element={<Cart/>}/>

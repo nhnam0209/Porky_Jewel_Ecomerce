@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import styled from 'styled-components';
-import { Remove } from '@material-ui/icons';
 import { useNavigate  } from 'react-router-dom';
 import { useSelector,useDispatch } from "react-redux";
 import { removeProduct } from '../redux/cartRedux';
@@ -26,6 +25,8 @@ const Wrapper  = styled.div`
 const Title = styled.h1`
     font-weight: 300;
     text-align: center; 
+    justify-content: center;
+    align-items: center;
 `;
 
 const Top = styled.div`
@@ -44,6 +45,17 @@ const TopButton = styled.button`
     color: ${props=>props.type === "filled" && "white"};
     
 `;
+const TopButton2 = styled.button`
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: ${props=>props.type === "filled" && "none"};
+    background-color: ${props=>props.type === "filled" ? "black" : "transparent"};
+    color: ${props=>props.type === "filled" && "white"};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
 const TopTexts = styled.div`
   @media only screen and (max-width:380px){
@@ -58,6 +70,7 @@ const TopText = styled.span`
     text-decoration: underline;
     cursor: pointer;
     margin: 0px 10px;
+    text-align: center;
 `;
 
 const Bottom = styled.div`
@@ -137,11 +150,7 @@ const PriceDetail = styled.div`
   }
 `;
 
-const ProductAmountContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-`;
+
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
@@ -186,20 +195,17 @@ const SummaryButton = styled.button`
 `;
 
 
-
-
 const Cart = () => {
   const navigate  = useNavigate();
   const cart = useSelector((state)=>state.cart);
   const dispatch = useDispatch();
 
-
-  const handleRemove = ()=>{
+  const handleClick =()=>{
+    //update cart
     dispatch(
-      removeProduct({...cart})
-    )
-    // alert("Button Clicked!");
-  }
+        removeProduct({ ...cart})
+    );
+}
 
   return (
     <Container>
@@ -210,10 +216,15 @@ const Cart = () => {
                 <TopButton onClick={()=>navigate("/")}>CONTINUE SHOPPING</TopButton>
                 <TopTexts>
                     <TopText>Shopping Bag({cart.quantity})</TopText>
-                    <TopText>Your Wishlist (0)</TopText>
+                    {/* <TopText>Your Wishlist (0)</TopText> */}
                 </TopTexts>
                 <TopButton type = "filled">CHECKOUT NOW</TopButton>
             </Top>
+            <Top>
+            <TopButton2 onClick={handleClick}>
+                    CLEAR ALL CART</TopButton2>
+            </Top>
+
             <Bottom>
               <Info>
                   {cart.product.map((product)=>(<Product>
@@ -225,10 +236,6 @@ const Cart = () => {
                       </Details>
                     </ProductDetail>
                     <PriceDetail>
-                      <ProductAmountContainer>
-                        <button onClick={handleRemove}>
-                        <Remove /></button>
-                      </ProductAmountContainer>
                       <ProductPrice>${product.price*product.quantity}</ProductPrice>
                     </PriceDetail>
                   </Product>))}
